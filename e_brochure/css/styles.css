@@ -1,0 +1,27 @@
+a:link {  color: #FFFFFF; text-decoration: underline}
+a:visited {  color: #333333; text-decoration: underline}
+a:hover {  color: #333333; text-decoration: none}
+.logo {  font-family: Tahoma; font-size: 26px; font-weight: bold; color: #0A5459}
+.text {  font-family: Tahoma; font-size: 11px; color: #666666}
+.title {  font-family: Tahoma; font-size: 18px; font-weight: bold; color: #333333}
+.text1 {
+font-family: Tahoma; font-size: 11px; color: #FFFFFF
+}
+a.a:link {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #72889D;
+}
+a.a:hover {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+a.a:visited {
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: normal;
+	color: #505C66;
+}

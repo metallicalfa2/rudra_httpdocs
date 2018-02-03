@@ -1,0 +1,38 @@
+/* CSS Document */
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#FFFFFF;
+	background-color:#00349A;
+}
+
+.hd
+{ background-color:#FFFFFF; width:100%}
+
+a
+{font-family:Arial, Helvetica, sans-serif;
+color:#FFFFFF;
+font-size:12px;
+text-decoration:none;
+font-weight:bold;
+}
+
+
+
+a:link {
+   color: #ffffff;
+}ffffff
+a:visited {
+   color: #ffffff;
+}
+a:active {
+   color: #ffffff;
+}
+a:hover {
+   color: #FF9900;
+}

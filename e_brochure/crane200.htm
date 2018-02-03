@@ -1,0 +1,232 @@
+<html>
+
+<head>
+<title>RUDRA SCALES E-BROCHURE</title>
+</head>
+
+<body bgcolor="#EFEFF8">
+
+<html>
+<head>
+<title>Free Javascript SlideShow Script with zoom in and out</title>
+</head>
+<script>
+<!--
+/* 
+SlideShow. Written by PerlScriptsJavaScripts.com
+Copyright http://www.perlscriptsjavascripts.com 
+Free and commercial Perl and JavaScripts     
+*/
+
+// transition effect. number between 0 and 23, 23 is random effect
+effect = 23; 
+
+// transition duration. number of seconds effect lasts
+duration = 1.5; 
+
+// seconds to diaply each image?
+display = 4;
+
+// width of stage (first image)
+oW = 900;
+
+// height of stage
+oH = 1200;
+
+// zoom width by (add or subtracts this many pixels from image width)
+zW = 40;
+
+// zoom height by 
+zH = 30;
+
+// path to image/name of image in slide show. this will also preload all images
+// each element in the array must be in sequential order starting with zero (0)
+SLIDES = new Array();
+
+SLIDES[0]  = ["baby_weighing.jpg", "BABY WEIGHING"];
+SLIDES[1]  = ["crane_scales.jpg", "CRANE SCALES"];
+SLIDES[2]  = ["pallet_scale.jpg", "PALLET SCALE"];
+SLIDES[3]  = ["personal_scale.jpg", "PERSONAL SCALE"];
+SLIDES[4]  = ["platform_scale.jpg", "PLATFORM SCALE"];
+SLIDES[5]  = ["pocket_scale.jpg", "POCKET SCALE"];
+SLIDES[6]  = ["precision_balance.jpg", "PRECISION BALANCE"];
+SLIDES[7]  = ["price_computing.jpg", "PRICE COMPUTING"];
+SLIDES[8]  = ["table_top_scale.jpg", "TABLE TOP SCALE"];
+SLIDES[9]  = ["tank weighing.jpg", "TANK WEIGHING"];
+SLIDES[10]  = ["weigh bridge.jpg", "WEIGH BRIDGE"];
+
+
+// end required modifications
+
+S = new Array();
+for(a = 0; a < SLIDES.length; a++){
+	S[a] = new Image(); S[a].src  = SLIDES[a][0];
+}
+// -->
+</script>
+
+</head>
+
+<body bgcolor="#EFEFF8">
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="695" height="131" id="AutoNumber1">
+    <tr>
+      <td width="786" height="49" colspan="3">
+      <p align="center">
+      <img border="0" src="ground2b.jpg" width="872" height="126"></td>
+    </tr>
+    <tr>
+      <td width="81" height="28" valign="top" bgcolor="#C0C0C0">
+      <p align="center"><font face="Arial" size="2"><b>
+      <a href="http://www.emagazineconcept.com/pdf/crane200.pdf">Download</a></b></font></td>
+      <td width="506" height="28">
+      <img border="0" src="crane200_scales.jpg" width="684" height="915"></td>
+      <td width="108" height="28" valign="bottom" bgcolor="#C0C0C0">
+      <p align="center"><b><font size="2" face="Arial">
+      <a href="http://www.emagazineconcept.com/pdf/crane200.pdf">Download</a></font></b></td>
+    </tr>
+    <tr>
+      <td width="786" height="53" align="center" colspan="3">
+
+<html>
+
+<body bgcolor="#EFEFF8">
+
+<script>
+<!--
+
+f = document._slideShow;
+n = 0;
+t = 0;
+
+document.images["stage"].width  = oW;
+document.images["stage"].height = oH;
+f.delay.value = display;
+
+// add image numbers to select menu
+f.wichIm.options.length = 0;
+for(i in SLIDES){
+	f.wichIm.options[i] = new Option(SLIDES[i][1],i);
+}
+
+function startSS(){
+	t = setTimeout("runSS(" + f.currSlide.value + ")", 1 * 1);
+}
+
+function runSS(n){
+	n++;
+	if(n >= SLIDES.length){
+		n = 0;
+	}
+	document.images["stage"].src = S[n].src;
+	if(document.all && navigator.userAgent.indexOf("Opera") < 0 && navigator.userAgent.indexOf("Windows") >= 0){
+		document.images["stage"].style.visibility = "hidden";
+		document.images["stage"].filters.item(0).apply();
+		document.images["stage"].filters.item(0).transition = effect;
+		document.images["stage"].style.visibility = "visible";
+		document.images["stage"].filters(0).play(duration);
+	}
+	f.currSlide.value = n;
+	f.wichIm[n].selected = true;
+	t = setTimeout("runSS(" + f.currSlide.value + ")", f.delay.value * 1000);
+}
+
+function stopSS(){
+	if(t){
+		t = clearTimeout(t);
+	}
+}
+
+function nextSS(){
+	stopSS();
+	n = f.currSlide.value;
+	n++;
+	if(n >= SLIDES.length){
+		n = 0;
+	}
+	if(n < 0){
+		n = SLIDES.length - 1;
+	}
+	document.images["stage"].src = S[n].src;
+	f.currSlide.value = n;
+	f.wichIm[n].selected = true;
+	if(document.all && navigator.userAgent.indexOf("Opera") < 0 && navigator.userAgent.indexOf("Windows") >= 0){
+		document.images["stage"].style.visibility = "hidden";
+		document.images["stage"].filters.item(0).apply();
+		document.images["stage"].filters.item(0).transition = effect;
+		document.images["stage"].style.visibility = "visible";
+		document.images["stage"].filters(0).play(duration);
+	}
+}
+
+function prevSS(){
+	stopSS();
+	n = f.currSlide.value;
+	n--;
+	if(n >= SLIDES.length){
+		n = 0;
+	}
+	if(n < 0){
+		n = SLIDES.length - 1;
+	}
+	document.images["stage"].src = S[n].src;
+	f.currSlide.value = n;
+	f.wichIm[n].selected = true;
+	
+	if(document.all && navigator.userAgent.indexOf("Opera") < 0 && navigator.userAgent.indexOf("Windows") >= 0){
+		document.images["stage"].style.visibility = "hidden";
+		document.images["stage"].filters.item(0).apply();
+		document.images["stage"].filters.item(0).transition = effect;
+		document.images["stage"].style.visibility = "visible";
+		document.images["stage"].filters(0).play(duration);
+	}
+}
+
+function selected(n){
+	stopSS();
+	document.images["stage"].src = S[n].src;
+	f.currSlide.value = n;
+	
+	if(document.all && navigator.userAgent.indexOf("Opera") < 0 && navigator.userAgent.indexOf("Windows") >= 0){
+		document.images["stage"].style.visibility = "hidden";
+		document.images["stage"].filters.item(0).apply();
+		document.images["stage"].filters.item(0).transition = effect;
+		document.images["stage"].style.visibility = "visible";
+		document.images["stage"].filters(0).play(duration);
+	}
+}
+
+function zoom(dim1, dim2){
+	if(dim1){
+		if(document.images["stage"].width < oW){
+			document.images["stage"].width   = oW;
+			document.images["stage"].height  = oH;
+		} else {
+			document.images["stage"].width  += dim1;
+			document.images["stage"].height += dim2;
+		}
+		if(dim1 < 0){
+			if(document.images["stage"].width < oW){
+				document.images["stage"].width   = oW;
+				document.images["stage"].height  = oH;
+			}
+		}
+	} else {
+		document.images["stage"].width   = oW;
+		document.images["stage"].height  = oH;
+	}
+}
+// -->
+</script>
+</body></html></td>
+    </tr>
+  </table>
+  </center>
+</div>
+</body>
+</html>
+</body>
+
+</html>
